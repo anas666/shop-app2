@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="{% static 'css/signin.css' %}">
+</head>
+<body>
+    <!-- NavBar -->
+    <section id="header">
+        <a href="index.html"><img id="logo" src="{% static 'images/Keswa_Logo.png' %}" alt="Logo"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="signin1.html">Sign In</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="bi bi-cart3"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sign In / Sign Up -->
+    <section class="home">
+        <div class="content">
+        </div>
+
+            <div id="sign-in-form" class="wrapper-login pro">
+                <h2>Member Login</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div id="usernamesignin" class="input-box">
+                        <span class="icon"></span>
+                        <input type="email" placeholder="Email" name="user-email" required>
+                        <!--<label>Enter Your Email</label>-->
+                    </div>
+                    <div id="passwordsignin" class="input-box">
+                        <span class="icon"></span>
+                        <input type="password" placeholder="Password" name="user-password" required>
+                        <!--<label>Enter Your Password</label>-->
+                    </div>
+                    <div class="remember-forget">
+                        <label><input type="checkbox">Remember Me</label>
+                        <a href="#">Forgot Password</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="register-link">
+                        <p>Not a member? <a href="signup.html">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+    </section>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

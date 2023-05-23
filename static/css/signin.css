@@ -1,0 +1,198 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+#logo{
+    width:100px;
+    height:100px;
+}
+
+#header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:4px 20px;
+  background-color:#E3E6F3;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+  z-index:999;
+  position:sticky;
+  top:0;
+  left:0;
+}
+
+#navbar{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+#navbar li{
+  list-style:none;
+  padding: 0 20px;
+  position:relative;
+}
+
+#navbar li a{
+  text-decoration:none;
+  color:steelblue;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+  color:#222;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  background: #222;
+  width:30%;
+  height:2.5px;
+  position:absolute;
+  bottom:-4px;
+  left:20px;
+}
+
+.home{
+  position:relative;
+  width:100%;
+  height:100vh;
+  background: url(../Images/Form.jpg);
+  background-size:cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .content{
+  max-width: 600px;
+}
+
+.content h2{
+  font-size:3em;
+  letter-spacing: 0.03em;
+}
+
+.content p{
+  margin: 10px 0 40px;
+}
+
+.content a{
+  color:blanchedalmond;
+  text-decoration:none;
+  border: 2px solid steelblue;
+  background-color: steelblue;
+  padding:10px 40px;
+  border-radius: 40px;
+  transition:0.5s;
+}
+
+.content a:hover{
+  color:salmon;
+}
+
+.home .wrapper-login{
+  position:relative;
+  width:440px;
+}
+
+.wrapper-login h2{
+  font-size:2em;
+  color:#fff;
+  text-align:center;
+}
+
+.wrapper-login .input-box{
+  position:relative;
+  width:100%;
+  height:50px;
+  margin:20px 0;
+}
+
+.input-box input{
+  width:100%;
+  height:50%;
+  background:transparent;
+  border: 1px solid wheat;
+  outline:none;
+  border-radius: 40px;
+  padding:0 5px 0 15px;
+  color:aliceblue;
+}
+
+.wrapper-login .remember-forget{
+  font-size:0.9em;
+  font-weight: 500;
+  margin:-25px 0 15px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.remember-forget a{
+  text-decoration:none;
+  color:whitesmoke;
+}
+
+.remember-forget a:hover{
+  text-decoration: underline;
+}
+
+.remember-forget input{
+  accent-color: #fff;
+  margin-right:3px
+}
+
+.wrapper-login .btn{
+  width:100%;
+  height:40px;
+  border:none;
+  outline:none;
+  border-radius: 40px;
+  background:linear-gradient(90deg,#1e0b04,#71412a);
+  box-shadow: 0 8px 10px rgba(0,0,0,0.5);
+  cursor:pointer;
+  color:#fff;
+  font-weight: 500;
+}
+
+.wrapper-login .register-link{
+  font-size: 0.9em;
+  color:#fff;
+  text-align:center;
+  margin:30px 0;
+}
+
+.register-link p a{
+  color:#FFF;
+  text-decoration:none;
+  font-weight: 600;
+}
+
+.register-link p a:hover{
+  text-decoration: underline;
+}
+
+.home .pro{
+  width:30%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor:pointer;
+  box-shadow:20px 20px 30px rgba(0,0,0,0.2);
+  margin:15px 0;
+  transition:0.2s ease;
+  position:relative;
+  color:aliceblue;
+}
+
+.home .pro:hover{
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.6);
+}
